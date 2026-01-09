@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="WHIZYNET - Gerador profissional de SNI (Server Name Indication) para múltiplos países e operadores. Acesso rápido e seguro a SNIs válidas para diversos ISPs africanos e internacionais.">
+    <meta name="keywords" content="SNI, Server Name Indication, gerador SNI, hosts, ISP, operadores,Sni unitel, sni africel, Sni da unitel, internet ilimitada na unitel, internet gratis em Angola, Angola, Portugal, Brasil, Moçambique">
+    <meta name="author" content="Whizy Safary">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WHIZYNET - Gerador de SNI Profissional">
+    <meta property="og:description" content="Acesse SNIs válidas para os principais operadores de internet em África e internacionalmente.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://whizynet.tech">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WHIZYNET - Gerador de SNI">
+    <meta name="twitter:description" content="Gerador profissional de SNI para múltiplos países e operadores.">
+    
+    <title>WHIZYNET - Gerador de SNI Profissional | whizynet.tech</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://whizynet.tech">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "WHIZYNET",
+        "description": "Gerador profissional de SNI para múltiplos países e operadores",
+        "url": "https://whizynet.tech",
+        "applicationCategory": "UtilityApplication",
+        "creator": {
+            "@type": "Person",
+            "name": "Whizy Safary"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    <!--Multitag Ads Monetag-->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="200236" async data-cfasync="false"></script>
+    <!--Bright Tag Ads Monetag-->
+    <script>(function(s){s.dataset.zone='10436530',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <!--Onclick Tag Ads Monetag-->
+    <script>(function(s){s.dataset.zone='10437378',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <!--Push Notification Ads Monetag-->
+    <script src="https://3nbf4.com/act/files/tag.min.js?z=10437389" data-cfasync="false" async></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo-section">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="WHIZYNET Logo" class="logo-image" onerror="this.style.display='none'">
+                        <div class="logo-text">
+                            <h1>WHIZYNET</h1>
+                            <p class="tagline">SNI Generator Pro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Gerador Profissional de SNI</h2>
+                    <p class="hero-subtitle">Aceda a SNIs válidas para os principais operadores de internet internacionalmente</p>
+                    <p class="hero-meta">Desenvolvido por <strong>Whizy Safary</strong> | whizynet.netlify.app</p>
+                </div>
+            </section>
+
+            <!-- Generator Card -->
+            <section class="generator-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Selecione um País</h3>
+                        <p class="card-subtitle">Escolha o país para ver os operadores disponíveis</p>
+                    </div>
+                    <div class="card-content">
+                        <!-- Country Selection -->
+                        <div class="form-group">
+                            <label for="country-select" class="label">País</label>
+                            <select id="country-select" class="select">
+                                <option value="">Selecione um país...</option>
+                            </select>
+                        </div>
+
+                        <!-- Operator Selection -->
+                        <div class="form-group" id="operator-group" style="display: none;">
+                            <label for="operator-select" class="label">Operador</label>
+                            <select id="operator-select" class="select">
+                                <option value="">Selecione um operador...</option>
+                            </select>
+                        </div>
+
+                        <!-- Generate Button -->
+                        <button id="generate-btn" class="btn btn-primary" disabled>
+                            <span class="btn-icon"></span>
+                            <span class="btn-text">Gerar SNIs</span>
+                        </button>
+
+                        <!-- Loading State -->
+                        <div id="loading" class="loading hidden">
+                            <div class="spinner"></div>
+                            <p>Carregando dados...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section hidden">
+                <div class="results-header">
+                    <h3 class="results-title">SNIs Disponíveis</h3>
+                    <p class="results-subtitle" id="results-info"></p>
+                </div>
+                <div id="results-container" class="results-container">
+                    <!-- Results will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Empty State -->
+            <section id="empty-state" class="empty-state hidden">
+                <div class="empty-state-content">
+                    <p class="empty-state-icon"></p>
+                    <p class="empty-state-text">Nenhum dado de SNI disponível para esta seleção</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>WHIZYNET</h4>
+                    <p>Gerador profissional de SNI para múltiplos países e operadores.</p>
+       </div>
+       <div class="footer-section">
+             <h4>Links Rápidos</h4>
+             <nav class="nav-link">
+                   <ul>
+                  <li><a href="#" class="nav-link">Início</a></li>
+                    <li><a href="#" class="nav-link">Tutoriais</a></li>
+                    <li><a href="#" class="nav-link">Gerador de Payload</a></li>
+                    </ul>
+                </nav>
+       </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Desenvolvido por <strong>Whizy Safary</strong></p>
+                    <p><a href="mailto:contact@whizynet.tech">contact@whizynet.tech</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WHIZYNET. Todos os direitos reservados. | <a href="documento.html">Privacidade</a> | <a href="documento.html">Termos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

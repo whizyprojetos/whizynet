@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Termos de Uso e Política de Privacidade do WHIZYNET - Gerador de SNI Profissional">
+    <meta name="author" content="Whizy Safary">
+    <meta name="theme-color" content="#0f172a">
+    
+    <title>Termos de Uso e Política de Privacidade - WHIZYNET</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <style>
+        /* ==========================================
+           WHIZYNET - Dark Theme Professional
+           Preto e Azul
+           ========================================== */
+
+        /* Reset e Variáveis */
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1e40af;
+            --primary-light: #60a5fa;
+            --accent: #0ea5e9;
+            --background: #0f172a;
+            --surface: #1a2332;
+            --surface-light: #243447;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --border: #334155;
+            --border-light: #475569;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+            
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+            
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a2332 50%, #0f172a 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ==========================================
+           Container
+           ========================================== */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* ==========================================
+           Header
+           ========================================== */
+
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: transform var(--transition-base);
+            text-decoration: none;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-md);
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ==========================================
+           Main Content
+           ========================================== */
+
+        .main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        /* ==========================================
+           Hero Section
+           ========================================== */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ==========================================
+           Document Content
+           ========================================== */
+
+        .document-content {
+            background: var(--surface);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .document-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .document-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .document-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .document-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .document-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-section li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .document-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--surface-light);
+            border-radius: var(--radius-lg);
+            border-left: 3px solid var(--primary);
+        }
+
+        .document-contact {
+            background: var(--surface-light);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .document-contact p {
+            margin-bottom: 0.5rem;
+        }
+
+        .document-contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .document-contact a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           Footer
+           ========================================== */
+
+        .footer {
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color var(--transition-base);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           Animações
+           ========================================== */
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+
+            .document-content {
+                padding: 1.5rem;
+            }
+
+            .document-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .document-section h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="index.html" class="logo-container" style="text-decoration: none;">
+                    <img src="logo.png" alt="WHIZYNET Logo" class="logo-image" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <h1>WHIZYNET</h1>
+                        <p class="tagline">SNI Generator Pro</p>
+                    </div>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="documento.html" class="nav-link">Documentos</a>
+                    <a href="#" class="nav-link">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title">Termos de Uso e Política de Privacidade</h2>
+                <p class="hero-subtitle">Informações legais importantes sobre o uso do WHIZYNET</p>
+            </section>
+
+            <!-- Document Content -->
+            <section class="document-content">
+                <!-- Termos de Uso -->
+                <div class="document-section">
+                    <h2>Termos de Uso - WHIZYNET</h2>
+                    <div class="document-meta">
+                        <strong>Última atualização:</strong> 09 de janeiro de 2026
+                    </div>
+
+                    <p>Bem-vindo ao <strong>WHIZYNET - SNI GENERATOR</strong> (https://whizynet.tech). Ao aceder ou utilizar o nosso website, você concorda em cumprir e estar vinculado aos seguintes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deverá utilizar o nosso serviço.</p>
+
+                    <h3>1. Aceitação dos Termos</h3>
+                    <p>Ao utilizar o WHIZYNET, você confirma que tem capacidade legal para aceitar estes termos e que leu e compreendeu todas as condições aqui estabelecidas.</p>
+
+                    <h3>2. Descrição do Serviço</h3>
+                    <p>O WHIZYNET fornece uma ferramenta técnica para a geração de SNIs (Server Name Indication) para diversos operadores e países. O serviço é fornecido "como está" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas.</p>
+
+                    <h3>3. Uso Responsável e Legal</h3>
+                    <p>Você concorda em utilizar o WHIZYNET apenas para fins legítimos e de acordo com as leis aplicáveis, incluindo a legislação de Angola e as leis internacionais de ciberesegurança. É estritamente proibido:</p>
+                    <ul>
+                        <li>Utilizar as SNIs geradas para atividades fraudulentas, ilegais ou que violem os termos de serviço de terceiros (como ISPs ou operadores de rede).</li>
+                        <li>Tentar interferir no funcionamento correto do website.</li>
+                        <li>Utilizar scripts automatizados para extrair dados do site sem autorização prévia.</li>
+                    </ul>
+
+                    <h3>4. Isenção de Responsabilidade (Disclaimer)</h3>
+                    <p>O WHIZYNET e o seu criador, <strong>Whizy Safary</strong>, não se responsabilizam por:</p>
+                    <ul>
+                        <li>Qualquer uso indevido das informações ou ferramentas fornecidas.</li>
+                        <li>Danos diretos, indiretos ou consequentes resultantes do uso ou da incapacidade de usar o serviço.</li>
+                        <li>A precisão ou validade contínua das SNIs geradas, uma vez que estas dependem de infraestruturas de terceiros.</li>
+                    </ul>
+
+                    <h3>5. Propriedade Intelectual</h3>
+                    <p>Todo o conteúdo, design, logótipos e código do website são propriedade do WHIZYNET e estão protegidos por leis de direitos de autor. A reprodução não autorizada é proibida.</p>
+
+                    <h3>6. Alterações nos Termos</h3>
+                    <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação no website. O seu uso continuado do site após tais alterações constitui a sua aceitação dos novos termos.</p>
+
+                    <h3>7. Lei Aplicável</h3>
+                    <p>Estes termos são regidos e interpretados de acordo com as leis da República de Angola.</p>
+                </div>
+
+                <!-- Política de Privacidade -->
+                <div class="document-section">
+                    <h2>Política de Privacidade - WHIZYNET</h2>
+                    <div class="document-meta">
+                        <strong>Última atualização:</strong> 09 de janeiro de 2026
+                    </div>
+
+                    <p>No <strong>WHIZYNET</strong>, a sua privacidade é uma prioridade. Esta Política de Privacidade descreve como recolhemos, utilizamos e protegemos as suas informações ao utilizar o nosso website (https://whizynet.tech), em conformidade com a Lei de Proteção de Dados Pessoais de Angola (Lei n.º 22/11).</p>
+
+                    <h3>1. Recolha de Informações</h3>
+                    <p>O WHIZYNET é projetado para ser uma ferramenta de utilidade técnica com recolha mínima de dados:</p>
+                    <ul>
+                        <li><strong>Dados de Navegação:</strong> Podemos recolher informações técnicas anónimas, como o seu endereço IP, tipo de navegador e páginas visitadas, para fins de análise estatística e segurança.</li>
+                        <li><strong>Cookies:</strong> Utilizamos cookies para melhorar a sua experiência de navegação e para o funcionamento de ferramentas de terceiros (como redes de anúncios).</li>
+                    </ul>
+
+                    <h3>2. Uso das Informações</h3>
+                    <p>As informações recolhidas são utilizadas para:</p>
+                    <ul>
+                        <li>Operar e manter o website.</li>
+                        <li>Melhorar a funcionalidade do gerador de SNI.</li>
+                        <li>Monitorizar a segurança e prevenir abusos.</li>
+                        <li>Exibir anúncios relevantes através de parceiros de publicidade (como Monetag ou Adsterra).</li>
+                    </ul>
+
+                    <h3>3. Partilha de Dados com Terceiros</h3>
+                    <p>Não vendemos nem alugamos os seus dados pessoais. No entanto, podemos partilhar informações anónimas com:</p>
+                    <ul>
+                        <li><strong>Provedores de Anúncios:</strong> Redes de publicidade que utilizam cookies para exibir anúncios baseados nos seus interesses.</li>
+                        <li><strong>Autoridades Legais:</strong> Quando exigido por lei ou para proteger os nossos direitos legais.</li>
+                    </ul>
+
+                    <h3>4. Segurança dos Dados</h3>
+                    <p>Implementamos medidas de segurança técnicas e organizacionais (como o uso de protocolo HTTPS) para proteger as suas informações contra acesso não autorizado, alteração ou destruição.</p>
+
+                    <h3>5. Seus Direitos</h3>
+                    <p>De acordo com a Lei n.º 22/11 de Angola, você tem o direito de:</p>
+                    <ul>
+                        <li>Aceder aos dados que recolhemos sobre si (se aplicável).</li>
+                        <li>Solicitar a correção ou eliminação de dados.</li>
+                        <li>Opor-se ao tratamento de dados para fins de marketing.</li>
+                    </ul>
+
+                    <h3>6. Links para Terceiros</h3>
+                    <p>O nosso site pode conter links para outros websites. Não somos responsáveis pelas práticas de privacidade desses sites e recomendamos que leia as políticas de privacidade deles.</p>
+
+                    <h3>7. Alterações a esta Política</h3>
+                    <p>Podemos atualizar esta política periodicamente. Recomendamos que consulte esta página regularmente para se manter informado sobre como protegemos os seus dados.</p>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="document-contact">
+                    <p><strong>Contacto para Questões Legais:</strong></p>
+                    <p>Se tiver dúvidas sobre estes documentos ou sobre a nossa política de privacidade, contacte-nos em:</p>
+                    <p><a href="mailto:contact@whizynet.tech">contact@whizynet.tech</a></p>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-secondary);">Desenvolvido por <strong>Whizy Safary</strong> | whizynet.tech</p>
+                </div>
+            </section>
+        </div>
+    </main>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WHIZYNET. Todos os direitos reservados. | <a href="documento.html">Privacidade</a> | <a href="documento.html">Termos</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

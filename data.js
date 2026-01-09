@@ -63,5 +63,4 @@ const SNI_DATA = {
             "www.tmcel.mz"
         ]
     }
-    }
 };

@@ -2,7 +2,7 @@
 
 **WHIZYNET** é um gerador profissional de SNI (Server Name Indication) com tema dark moderno, desenvolvido por **Whizy Safary** para acesso rápido e seguro a SNIs válidas para múltiplos operadores em África e internacionalmente.
 
-**Website**: [whizynet.vercel.app](https://whizynet.vercel.app)
+**Website**: [whizynet-sni.vercel.app](https://whizynet-sni.vercel.app)
 
 ## 📊 Compatibilidade
 

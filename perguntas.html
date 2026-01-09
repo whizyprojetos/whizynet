@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Termos de Uso e Política de Privacidade do WHIZYNET - Gerador de SNI Profissional">
+    <meta name="author" content="Whizy Safary">
+    <meta name="theme-color" content="#0f172a">
+    <!--Monetag Plataforma-->
+    <meta name="monetag" content="f5fbedcf6eae866ec4cc7bba89a11aca">   
+    <!--Multitag Ads-->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>  
+    
+    <title>FAQ - Perguntas Comuns | WHIZYNET</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <style>
+        /* ==========================================
+           WHIZYNET - Dark Theme Professional
+           Preto e Azul
+           ========================================== */
+
+        /* Reset e Variáveis */
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1e40af;
+            --primary-light: #60a5fa;
+            --accent: #0ea5e9;
+            --background: #0f172a;
+            --surface: #1a2332;
+            --surface-light: #243447;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --border: #334155;
+            --border-light: #475569;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+            
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+            
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a2332 50%, #0f172a 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ==========================================
+           Container
+           ========================================== */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* ==========================================
+           Header
+           ========================================== */
+
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: transform var(--transition-base);
+            text-decoration: none;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-md);
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ==========================================
+           Main Content
+           ========================================== */
+
+        .main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        /* ==========================================
+           Hero Section
+           ========================================== */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ==========================================
+           Document Content
+           ========================================== */
+
+        .document-content {
+            background: var(--surface);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .document-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .document-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .document-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .document-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .document-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-section li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .document-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--surface-light);
+            border-radius: var(--radius-lg);
+            border-left: 3px solid var(--primary);
+        }
+
+        .document-contact {
+            background: var(--surface-light);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .document-contact p {
+            margin-bottom: 0.5rem;
+        }
+
+        .document-contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .document-contact a:hover {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           Footer
+           ========================================== */
+
+        .footer {
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0 1rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color var(--transition-base);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           Animações
+           ========================================== */
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+
+            .document-content {
+                padding: 1.5rem;
+            }
+
+            .document-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .document-section h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+    <!--Monetag All in One Ads-->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="200258" async data-cfasync="false"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="index.html" class="logo-container" style="text-decoration: none;">
+                    <img src="logo.png" alt="WHIZYNET Logo" class="logo-image" onerror="this.style.display='none'">
+                    <div class="logo-text">
+                        <h1>WHIZYNET</h1>
+                        <p class="tagline">SNI Generator Pro</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title">FAQ - Perguntas Comuns</h2>
+                <p class="hero-subtitle">Veja Respostas para algumas perguntas frequentes sobre sni e vpns</p>
+            </section>
+
+            <!-- Document Content -->
+            <section class="document-content">
+                <!-- Termos de Uso -->
+                <div class="document-section">
+                    <h2>FAQs</h2>
+                    <h3>1. O que é um host de bug SNI e como ele funciona?</h3>
+                    <p>Os servidores de bugs SNI são sites com acesso gratuito à internet em seu país. Alguns desses sites podem ser oferecidos por provedores de internet, empresas, universidades, governo e muitas outras instituições.
+<br>
+<br>
+Para usar o host com SNI habilitado, utilizamos aplicativos VPN que permitem o uso de um SNI personalizado para conectar-se à internet. Existem diversos aplicativos VPS com SNI personalizado, mas os mais comuns são HA TUNNEL PLUS, CUSTOM HTTPS, HTTPS INJECTOR, STARK VPS e muitos outros.</p>
+
+                    <h3>2. Qual a principal vantagem de usar SNI bug host com VPN?</h3>
+                    <p>A principal vantagem é o bypass de censura ou restrições de tráfego. Como o SNI indica um domínio “permitido” ou zero-rated pela operadora, o tráfego VPN passa despercebido, parecendo ser apenas uma visita comum a um site HTTPS legítimo, o que dificulta bloqueios baseados em IP ou protocolo.</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WHIZYNET. Todos os direitos reservados. | <a href="documento.html">Privacidade</a> | <a href="documento.html">Termos</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

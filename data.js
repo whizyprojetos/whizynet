@@ -7,7 +7,7 @@ const SNI_DATA = {
             "unitel.co.ao",
             "unitel.ao",
             "saldo.unitel.ao",
-            "signup.a",
+            "signup.ao",
             "api.baipaga.ao",
             "investors.spotify.com",
             "spotify.com",

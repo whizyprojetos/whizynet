@@ -5,14 +5,14 @@
 
 const TUTORIALS_DATA = [
     {
-        id: "como-usar-sni-unitel",
-        title: "Como criar arquivo no HTTP Injector (SSL/TLS)",
+        id: "como-criar-arquivo-http-injector-ssl-tls",
+        title: "Como criar arquivo no HTTP Injector (TLS/SSL)",
         category: "HTTP INJECTOR",
         date: "10 Jan 2026",
         author: "Whizy Safary",
         excerpt: "Aprenda o passo a passo de como configurar o seu HTTP Injector para ter internet grátis ilimitada.",
         content: `
-            <p>HTTP Injector é um dos aplicativos mais estáveis para o uso de túneis VPN. Neste tutorial, vamos focar na configuração do método Ssl/Tls com servidores do aplicativo.</p>
+            <p>HTTP Injector é um dos aplicativos mais estáveis para o uso de túneis VPN. Neste tutorial, vamos focar na configuração do método Tls/Ssl com servidores do aplicativo.</p>
             <h3>Requisitos:</h3>
             <ul>
                 <li>Aplicativo HTTP Injector instalado (Versão Original Play Store).</li>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="WHIZYNET - Blog de Tutoriais. Aprenda a configurar VPNs, criar payloads e usar SNIs para internet ilimitada.">
+    <meta name="author" content="Whizy Safary">
+    <meta name="theme-color" content="#0f172a">
+      <!--Monetag Plataforma-->
+    <meta name="monetag" content="f5fbedcf6eae866ec4cc7bba89a11aca"> 
+       <!--Multitag Ads-->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>    
+    <title>Tutoriais | WHIZYNET - Aprenda com os Melhores</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .blog-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            transition: gap 0.2s;
+        }
+        
+        .read-more:hover {
+            gap: 0.5rem;
+        }
+        
+        .search-container {
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--surface-light);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-xl);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all var(--transition-base);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo-section">
+                    <a href="index.html" style="text-decoration: none;">
+                        <div class="logo-container">
+                            <img src="logo.png" alt="WHIZYNET Logo" class="logo-image" onerror="this.style.display='none'">
+                            <div class="logo-text">
+                                <h1>WHIZYNET</h1>
+                                <p class="tagline">Tutoriais</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Central de Tutoriais</h2>
+                    <p class="hero-subtitle">Aprenda tudo sobre VPNs, SNIs e como ter internet ilimitada com segurança.</p>
+                </div>
+            </section>
+
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Pesquisar tutoriais (ex: Unitel, Payload...)">
+            </div>
+
+            <div id="tutorials-grid" class="blog-grid">
+                <!-- Tutoriais serão carregados aqui via JS -->
+            </div>
+            
+            <div id="no-results" class="hidden" style="text-align: center; padding: 3rem;">
+                <p style="color: var(--text-secondary); font-size: 1.125rem;">Nenhum tutorial encontrado para a sua pesquisa.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>WHIZYNET</h4>
+                    <p>A maior central de conhecimento sobre internet ilimitada em Angola.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <nav class="nav-link">
+                        <ul>
+                            <li><a href="index.html">Gerador SNI</a></li>
+                            <li><a href="payloads.html">Gerador Payload</a></li>
+                            <li><a href="perguntas.html">FAQs (Perguntas Comuns)</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WHIZYNET. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tutorials.js"></script>
+    <script>
+        const tutorialsGrid = document.getElementById('tutorials-grid');
+        const searchInput = document.getElementById('search-input');
+        const noResults = document.getElementById('no-results');
+
+        function renderTutorials(filter = '') {
+            const filtered = TUTORIALS_DATA.filter(t => 
+                t.title.toLowerCase().includes(filter.toLowerCase()) || 
+                t.excerpt.toLowerCase().includes(filter.toLowerCase()) ||
+                t.category.toLowerCase().includes(filter.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                tutorialsGrid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            tutorialsGrid.innerHTML = filtered.map(t => `
+                <article class="blog-card">
+                    <img src="${t.image}" alt="${t.title}" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">${t.category}</span>
+                        <h3 class="blog-title">${t.title}</h3>
+                        <p class="blog-excerpt">${t.excerpt}</p>
+                        <div class="blog-meta">
+                            <span>${t.date}</span>
+                            <span>Por ${t.author}</span>
+                        </div>
+                        <a href="ler-tutorial.html?id=${t.id}" class="read-more">Ler Tutorial →</a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        searchInput.addEventListener('input', (e) => renderTutorials(e.target.value));
+        
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => renderTutorials());
+    </script>
+</body>
+</html>

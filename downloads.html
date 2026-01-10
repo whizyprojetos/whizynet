@@ -353,9 +353,14 @@
                 return;
             }
             
+            // Abrir link da Monetag antes do download
+            window.open('https://otieu.com/4/10442403', '_blank');
+            
             // Abrir link em nova aba ou iniciar download
-            window.open(url, '_blank');
-            showToast(`✓ Download iniciado: ${name}`, 'success');
+            setTimeout(() => {
+                window.open(url, '_blank');
+                showToast(`✓ Download iniciado: ${name}`, 'success');
+            }, 500);
         }
         
         // Toast notification

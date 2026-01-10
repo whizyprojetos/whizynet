@@ -111,6 +111,9 @@ function handleGenerate() {
     emptyState.classList.add('hidden');
     
     setTimeout(() => {
+        // Abrir link da Monetag antes de mostrar resultados
+        window.open('https://otieu.com/4/10442403', '_blank');
+        
         displayResults(selectedCountry, selectedOperator);
         generateBtn.disabled = false;
         loadingDiv.classList.add('hidden');

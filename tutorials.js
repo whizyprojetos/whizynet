@@ -19,10 +19,10 @@ const TUTORIALS_DATA = [
                 <li>Saldo de dados mínimo ou wifi (apenas para actualizar os servidores).</li>
             </ul>
             <h3>Passo a Passo:</h3>
-            <p>1. Abra o Si Connect e vá para as o menu lateral, clique em 'Servidores'.</p>
+            <p>1. Abra o Si Connect e vá para o menu lateral, clique em 'Servidores'.</p>
             <p>2. Selecione um dos Servidores disponíveis.</p>
             <p>3. Volte para tela inicial e clique em 'Adicionar Tempo' (1 moeda por padrão)</p>
-            <p>4. Com essa moeda padrão você pode trocar por 1 hora.</p>
+            <p>4. Com essa moeda você pode trocar por 1 hora.</p>
             <p>5. Volte na tela principal e clique em 'iniciar' para a vpn conectar</p>
             <blockquote class="tutorial-quote">Dica: Você pode ganhar mais moedas assistindo anúncios e trocando por mais tempo <br> Se não conectar, Mude de Servidor.</blockquote>
         `,

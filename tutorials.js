@@ -5,6 +5,30 @@
 
 const TUTORIALS_DATA = [
     {
+        id: "como-configurar-si-connect",
+        title: "Como configurar Si Connect",
+        category: "SI CONNECT",
+        date: "10 Jan 2026",
+        author: "Whizy Safary",
+        excerpt: "Aprenda o passo a passo de como configurar o Si Connect para ter internet grátis ilimitada.",
+        content: `
+            <p>Si é um dos aplicativos actualmente popular para internet grátis Ilimitada. Neste tutorial, vamos focar na configuração do aplicativo</p>
+            <h3>Requisitos:</h3>
+            <ul>
+                <li>Aplicativo Si Connect (Versão Original Play Store).</li>
+                <li>Saldo de dados mínimo ou wifi (apenas para actualizar os servidores).</li>
+            </ul>
+            <h3>Passo a Passo:</h3>
+            <p>1. Abra o Si Connect e vá para as o menu lateral, clique em 'Servidores'.</p>
+            <p>2. Selecione um dos Servidores disponíveis.</p>
+            <p>3. Volte para tela inicial e clique em 'Adicionar Tempo' (1 moeda por padrão)</p>
+            <p>4. Com essa moeda padrão você pode trocar por 1 hora.</p>
+            <p>5. Volte na tela principal e clique em 'iniciar' para a vpn conectar</p>
+            <blockquote class="tutorial-quote">Dica: Você pode ganhar mais moedas assistindo anúncios e trocando por mais tempo <br> Se não conectar, Mude de Servidor.</blockquote>
+        `,
+        image: "https://i.ibb.co/gZWG8TFh/siconnect.jpg?w=800&auto=format&fit=crop&q=120"
+    },
+    {
         id: "como-criar-arquivo-http-injector-ssl-tls",
         title: "Como criar arquivo no HTTP Injector (TLS/SSL)",
         category: "HTTP INJECTOR",

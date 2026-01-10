@@ -12,7 +12,7 @@ const TUTORIALS_DATA = [
         author: "Whizy Safary",
         excerpt: "Aprenda o passo a passo de como configurar o Si Connect para ter internet grátis ilimitada.",
         content: `
-            <p>Si é um dos aplicativos actualmente popular para internet grátis Ilimitada. Neste tutorial, vamos focar na configuração do aplicativo</p>
+            <p>Si Connect é um dos aplicativos actualmente popular para internet grátis Ilimitada. Neste tutorial, vamos focar na configuração do aplicativo</p>
             <h3>Requisitos:</h3>
             <ul>
                 <li>Aplicativo Si Connect (Versão Original Play Store).</li>

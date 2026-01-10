@@ -24,6 +24,7 @@ const TUTORIALS_DATA = [
             <p>3. Volte para tela inicial e clique em 'Adicionar Tempo' (1 moeda por padrão)</p>
             <p>4. Com essa moeda você pode trocar por 1 hora.</p>
             <p>5. Volte na tela principal e clique em 'iniciar' para a vpn conectar</p>
+            <a href="https://otieu.com/4/10438795" class="nav-link">Ver Vídeo Tutorial</a>
             <blockquote class="tutorial-quote">Dica: Você pode ganhar mais moedas assistindo anúncios e trocando por mais tempo <br> Se não conectar, Mude de Servidor.</blockquote>
         `,
         image: "https://i.ibb.co/gZWG8TFh/siconnect.jpg?w=800&auto=format&fit=crop&q=120"
@@ -49,6 +50,7 @@ const TUTORIALS_DATA = [
             <p>3. No campo Server Name Indication (SNI), insira uma das SNIs que você copiou do nosso gerador.<br> E na versão do 'TLS' escolha um (Recomendo TLSv1.3)</p>
             <p>4. Depois Clique no menu lateral e clique em Servidores, escolha um servidor que suporte o 'SSH'.</p>
             <p>5. Depois Clique no botão 'Iniciar' deslize para leteral direito nos registros para ver os precedimentos até o texto 'Vpn Estabelecida' e uma notificação no seu celular 'conectado'</p>
+            <a href="https://otieu.com/4/10438795" class="nav-link">Ver Vídeo Tutorial</a>
             <blockquote class="tutorial-quote">Dica: Se não conectar de primeira, Mude entre Servidores ou tente alternar entre o modo avião para renovar o seu IP.</blockquote>
         `,
         image: "https://i.ibb.co/7xq6jVJ5/httpinjectorssl-tls.jpg?w=800&auto=format&fit=crop&q=120"

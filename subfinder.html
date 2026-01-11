@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="WHIZYNET Subdomain Finder - Ferramenta profissional para encontrar subdomínios de qualquer domínio. Ideal para pesquisar SNIs e hosts válidos.">
+    <meta name="keywords" content="subdomain finder, encontrar subdomínios, SNI, hosts, segurança, rede, WHIZYNET">
+    <meta name="author" content="Whizy Safary">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow">
+    <!--Monetag Plataforma-->
+    <meta name="monetag" content="f5fbedcf6eae866ec4cc7bba89a11aca"> 
+       <!--Multitag Ads-->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>    
+    <!-- Monetag Interstitial Script -->
+<script src="https://alwingulla.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>
+    
+    <title>Subdomain Finder | WHIZYNET - Ferramenta de Pesquisa de Hosts</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .subfinder-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 0.75rem;
+        }
+        
+        .result-item {
+            background: var(--surface-light);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--primary-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all var(--transition-base);
+        }
+        
+        .result-item:hover {
+            border-color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .copy-btn-small {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn-small:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .stats-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo-section">
+                    <a href="index.html" style="text-decoration: none;">
+                        <div class="logo-container">
+                            <img src="logo.png" alt="WHIZYNET Logo" class="logo-image" onerror="this.style.display='none'">
+                            <div class="logo-text">
+                                <h1>WHIZYNET</h1>
+                                <p class="tagline">Subdomain Finder Pro</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">Subdomain Finder</h2>
+                    <p class="hero-subtitle">Encontre subdomínios ocultos e hosts válidos para suas configurações de rede.</p>
+                </div>
+            </section>
+
+            <section class="subfinder-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Pesquisar Domínio</h3>
+                        <p class="card-subtitle">Insira o domínio principal (ex: google.com)</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="form-group">
+                            <label for="domain-input" class="label">Domínio</label>
+                            <input type="text" id="domain-input" class="select" placeholder="ex: google.com" style="padding: 0.875rem 1rem; border: 2px solid var(--border); border-radius: var(--radius-lg); font-size: 1rem; font-family: inherit; color: var(--text-primary); background: var(--surface-light); cursor: text; appearance: none; background-image: none;">
+                        </div>
+                        
+                        <button id="search-btn" class="btn btn-primary">
+                            <span class="btn-text">Buscar Subdomínios</span>
+                        </button>
+
+                        <div id="loading" class="loading hidden">
+                            <div class="spinner"></div>
+                            <p>Pesquisando em múltiplas fontes...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-section hidden" style="margin-top: 3rem;">
+                <div class="results-header">
+                    <div id="stats-container"></div>
+                    <h3 class="results-title">Subdomínios Encontrados</h3>
+                    <p class="results-subtitle">Resultados...</p>
+                </div>
+                <div id="results-container" class="results-list">
+                    <!-- Resultados serão inseridos aqui -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 WHIZYNET. Todos os direitos reservados. | <a href="documento.html">Privacidade</a> | <a href="documento.html">Termos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+    </div>
+
+    <script>
+        const domainInput = document.getElementById('domain-input');
+        const searchBtn = document.getElementById('search-btn');
+        const loadingDiv = document.getElementById('loading');
+        const resultsSection = document.getElementById('results-section');
+        const resultsContainer = document.getElementById('results-container');
+        const statsContainer = document.getElementById('stats-container');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+
+        searchBtn.addEventListener('click', findSubdomains);
+        domainInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') findSubdomains();
+        });
+
+        async function findSubdomains() {
+            const domain = domainInput.value.trim().toLowerCase();
+            if (!domain) {
+                showToast('Por favor, digite um domínio válido.', 'error');
+                return;
+            }
+
+            // Reset UI
+            searchBtn.disabled = true;
+            loadingDiv.classList.remove('hidden');
+            resultsSection.classList.add('hidden');
+            resultsContainer.innerHTML = '';
+            statsContainer.innerHTML = '';
+
+            const subdomains = new Set();
+            const proxy = 'https://corsproxy.io/?';
+
+            try {
+                // Fontes em paralelo para velocidade
+                const promises = [
+                    fetchAnubis(domain, proxy, subdomains),
+                    fetchCrtSh(domain, proxy, subdomains),
+                    fetchSonar(domain, proxy, subdomains)
+                ];
+
+                await Promise.allSettled(promises);
+
+                const sortedSubs = Array.from(subdomains).sort();
+
+                if (sortedSubs.length === 0) {
+                    showToast('Nenhum subdomínio encontrado.', 'error');
+                } else {
+                    renderResults(sortedSubs);
+                    resultsSection.classList.remove('hidden');
+                    resultsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            } catch (error) {
+                showToast('Erro ao realizar a busca.', 'error');
+            } finally {
+                searchBtn.disabled = false;
+                loadingDiv.classList.add('hidden');
+            }
+        }
+
+        async function fetchAnubis(domain, proxy, set) {
+            try {
+                const url = `https://jldc.me/anubis/subdomains/${domain}`;
+                const response = await fetch(proxy + encodeURIComponent(url));
+                if (response.ok) {
+                    const data = await response.json();
+                    data.forEach(sub => {
+                        const clean = sub.trim().toLowerCase().replace(/^\*\./, '');
+                        if (clean.endsWith(`.${domain}`) || clean === domain) set.add(clean);
+                    });
+                }
+            } catch (e) {}
+        }
+
+        async function fetchCrtSh(domain, proxy, set) {
+            try {
+                const url = `https://crt.sh/?q=%25.${domain}&output=json`;
+                const response = await fetch(proxy + encodeURIComponent(url));
+                if (response.ok) {
+                    const data = await response.json();
+                    data.forEach(entry => {
+                        if (entry.name_value) {
+                            entry.name_value.split('\n').forEach(name => {
+                                const clean = name.trim().toLowerCase().replace(/^\*\./, '');
+                                if (clean.endsWith(`.${domain}`) || clean === domain) set.add(clean);
+                            });
+                        }
+                    });
+                }
+            } catch (e) {}
+        }
+
+        async function fetchSonar(domain, proxy, set) {
+            try {
+                const url = `https://sonar.omnisint.io/subdomains/${domain}`;
+                const response = await fetch(proxy + encodeURIComponent(url));
+                if (response.ok) {
+                    const data = await response.json();
+                    data.forEach(sub => {
+                        const clean = sub.trim().toLowerCase().replace(/^\*\./, '');
+                        if (clean.endsWith(`.${domain}`) || clean === domain) set.add(clean);
+                    });
+                }
+            } catch (e) {}
+        }
+
+        function renderResults(subs) {
+            statsContainer.innerHTML = `<span class="stats-badge">${subs.length} Subdomínios Únicos</span>`;
+            
+            subs.forEach(sub => {
+                const item = document.createElement('div');
+                item.className = 'result-item';
+                item.innerHTML = `
+                    <span>${sub}</span>
+                    <button class="copy-btn-small" onclick="copyToClipboard('${sub}')">Copiar</button>
+                `;
+                resultsContainer.appendChild(item);
+            });
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Copiado para o clipboard!');
+            });
+        }
+
+        function showToast(message, type = 'success') {
+            toastMessage.textContent = message;
+            toast.classList.remove('hidden', 'error');
+            if (type === 'error') toast.classList.add('error');
+            toast.style.animation = 'none';
+            setTimeout(() => { toast.style.animation = 'slideInUp 0.3s ease-out'; }, 10);
+            setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+        }
+    </script>
+</body>
+</html>

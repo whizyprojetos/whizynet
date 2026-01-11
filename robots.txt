@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://whizynet-sni.vercel.app/sitemap.xml

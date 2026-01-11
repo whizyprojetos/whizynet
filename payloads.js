@@ -14,7 +14,7 @@ const PAYLOADS_DATA = [
        },
      {
       name: "REVERSO",
-      content:"GET wss:/// HTTP/1.1[crlf]Host: unitel.ao[crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
+      content:"GET wss:/// HTTP/1.1[crlf]Host: [crlf]Upgrade: Websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
        },
     {
         name: "SSL/TLS",

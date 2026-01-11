@@ -8,13 +8,14 @@
     <meta name="author" content="Whizy Safary">
     <meta name="theme-color" content="#0f172a">
     <meta name="robots" content="index, follow">
-    <!--Monetag Plataforma-->
+    
+    <!-- Monetag Plataforma -->
     <meta name="monetag" content="f5fbedcf6eae866ec4cc7bba89a11aca"> 
-       <!--Multitag Ads-->
+    <!-- Multitag Ads -->
     <script src="https://quge5.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>    
     <!-- Monetag Interstitial Script -->
-<script src="https://alwingulla.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>
-    
+    <script src="https://alwingulla.com/88/tag.min.js" data-zone="200324" async data-cfasync="false"></script>
+
     <title>Subdomain Finder | WHIZYNET - Ferramenta de Pesquisa de Hosts</title>
     
     <!-- Google Fonts -->
@@ -27,6 +28,11 @@
     <link rel="stylesheet" href="styles.css">
     
     <style>
+        /* Correção de Layout Mobile */
+        .main {
+            padding-top: 2rem;
+        }
+        
         .subfinder-container {
             max-width: 700px;
             margin: 0 auto;
@@ -51,6 +57,11 @@
             justify-content: space-between;
             align-items: center;
             transition: all var(--transition-base);
+            word-break: break-all;
+        }
+        
+        .result-item span {
+            margin-right: 1rem;
         }
         
         .result-item:hover {
@@ -67,6 +78,7 @@
             font-size: 0.75rem;
             cursor: pointer;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
         
         .copy-btn-small:hover {
@@ -83,6 +95,21 @@
             font-size: 0.75rem;
             font-weight: 700;
             margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            .hero-subtitle {
+                font-size: 0.875rem;
+            }
+            .card-header {
+                padding: 1.5rem;
+            }
+            .card-content {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -153,6 +180,22 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>WHIZYNET</h4>
+                    <p>Gerador profissional de SNI e ferramentas de rede.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <nav class="nav-link">
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="payloads.html">Gerador Payload</a></li>
+                            <li><a href="tutoriais.html">Tutoriais</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 WHIZYNET. Todos os direitos reservados. | <a href="documento.html">Privacidade</a> | <a href="documento.html">Termos</a></p>
             </div>
@@ -185,6 +228,9 @@
                 return;
             }
 
+            // Abrir link da Monetag ao clicar em buscar
+            window.open('https://otieu.com/4/10442403', '_blank');
+
             // Reset UI
             searchBtn.disabled = true;
             loadingDiv.classList.remove('hidden');
@@ -196,7 +242,6 @@
             const proxy = 'https://corsproxy.io/?';
 
             try {
-                // Fontes em paralelo para velocidade
                 const promises = [
                     fetchAnubis(domain, proxy, subdomains),
                     fetchCrtSh(domain, proxy, subdomains),

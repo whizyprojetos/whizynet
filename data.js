@@ -48,17 +48,9 @@ const SNI_DATA = {
             "email.vodacom.co.mz",
             "www.vodacomwifi.co.mz"
         ],
-        "Mcel": [
-            "www.mcel.co.mz",
-            "webmail.mcel.co.mz",
-            "portal.mcel.co.mz",
-            "www.mceldigital.co.mz",
-            "app.mcel.co.mz",
-            "mail.mcel.co.mz",
-            "mobile.mcel.co.mz",
-            "www.mcelnet.co.mz",
-            "email.mcel.co.mz",
-            "www.mcelwifi.co.mz"
+        "Movitel": [
+            "img.zakelijkfinancieren-a1.blgwonen.nl",
+            "app.ubuntu.vm.co.mz"
         ],
         "Tmcel": [
             "www.tmcel.mz"

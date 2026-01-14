@@ -4,6 +4,9 @@
 const SNI_DATA = {
     "Angola": {
         "Unitel": [
+            "empregos.unitel.ao",
+            "appmusica.unitel.ao",
+            "mseller.unitel.co.ao",
             "unitel.mywire.org",
             "unitel.co.ao",
             "unitel.ao",
